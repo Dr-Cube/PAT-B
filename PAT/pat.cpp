@@ -1,4 +1,14 @@
-//
+//1003
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+int main()
+{
+
+	system("pause");
+	return 0;
+}
+
 
 //1032
 /*#include<stdio.h>
