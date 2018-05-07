@@ -1,10 +1,22 @@
 //1003
 #include<stdio.h>
 #include<iostream>
+#include<string>
+#include<vector>
 using namespace std;
 int main()
 {
-
+	int n;
+	vector<string> p;
+	string ptmp;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> ptmp;
+		p.push_back(ptmp);
+		//cout << p[i] << endl;
+	}
+	
 	system("pause");
 	return 0;
 }
