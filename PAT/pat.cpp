@@ -6,17 +6,20 @@
 using namespace std;
 int main()
 {
-	int n;
-	vector<string> p;
+	int n, flag[11] = { 0 };
+	//vector<string> p;
 	string ptmp;
 	cin >> n;
 	for (int i = 0; i < n; i++)
 	{
 		cin >> ptmp;
-		p.push_back(ptmp);
+		//p.push_back(ptmp);
 		//cout << p[i] << endl;
 	}
 	
+	if (flag == 1) cout << "YES";
+	if (flag == 0) cout << "NO";
+
 	system("pause");
 	return 0;
 }
