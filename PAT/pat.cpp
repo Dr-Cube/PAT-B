@@ -1,5 +1,48 @@
+//1041
+#include <iostream>
+
+#include <string>
+using namespace std;
+struct Student {
+	string examid;
+	int testseat;
+	int examseat;
+};
+
+
+int main()
+{
+
+	struct Student s1[1000];
+	int n, m;
+	int temptest, tempexam;
+	string tempid;
+	int examlu[1000];
+	cin >> n;
+	for (int i = 0; i<n; i++)
+	{
+		cin >> tempid >> temptest >> tempexam;
+		s1[i].examid = tempid;
+		s1[i].testseat = temptest;
+		s1[i].examseat = tempexam;
+	}
+	cin >> m;
+	for (int i = 0; i<m; i++)
+	{
+		cin >> examlu[i];
+		for (int j = 0; j<n; j++)
+		{
+			if (examlu[i] == s1[j].testseat) cout << s1[j].examid << ' ' << s1[j].examseat << endl;
+		}
+	}
+	system("pause");
+	return 0;
+
+}
+
+
 //1003
-#include<stdio.h>
+/*#include<stdio.h>
 #include<iostream>
 #include<string>
 #include<vector>
@@ -22,7 +65,7 @@ int main()
 
 	system("pause");
 	return 0;
-}
+}*/
 
 
 //1032
