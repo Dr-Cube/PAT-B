@@ -3,65 +3,10 @@
 #include<string>
 
 using namespace std;
-struct StudentThg
-{
-	char name[4];
-	int numthg;
-	string stdthg[15];
-	//string stdthg_wr[15];
-	int flag=0;
-};
+
 int main()
 {
-	int m, n;
-	string tempthg;
-	string thg[6];
-	int cntstd = 0;
-	int cntthg = 0;
-	//string cnt[10] = {0};
-	cin >> n >> m;
-	for (int i = 0; i < m; i++)
-	{
-		cin >> tempthg;
-		thg[i] = tempthg;
-	}
 	
-	struct StudentThg s1[1000];
-	for (int i = 0; i < n; i++)
-	{
-		cin >> s1[i].name >> s1[i].numthg;
-		for (int j = 0; j < s1[i].numthg; j++)
-		{
-			cin >> s1[i].stdthg[j]; 
-			//cout << s1[i].stdthg[j]<<endl;
-		}
-	}
-	for (int i = 0; i < m; i++)//物品个数
-	{
-		for (int j = 0; j < n; j++)//学生人数
-		{
-			//cnt = 0;
-			
-			for (int k = 0; k < s1[j].numthg; k++)//学生的物品个数
-			{
-				if (s1[j].stdthg[k] == thg[i])
-				{
-					//cnt[k]=s1[j].stdthg[k];
-					s1[j].flag = 1;
-					//s1[j].stdthg_wr[k] = thg[i];
-					cntthg++;
-					//cout << s1[j].name << ":";
-					//cout << ' ' << s1[j].stdthg[k]<<endl;
-				}
-				else s1[j].flag = 0;
-				
-			}
-		}
-	}
-	
-
-	if (cntthg == 0) cout << 0 << ' ' << 0;
-	else cout << cntstd+1 << ' ' << cntthg;
 
 	system("pause");
 	return 0;

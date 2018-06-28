@@ -1,3 +1,3 @@
 ﻿  pat.cpp
-  PAT.vcxproj -> D:\programs\PAT\PAT-B\x64\Debug\PAT.exe
-  PAT.vcxproj -> D:\programs\PAT\PAT-B\x64\Debug\PAT.pdb (Partial PDB)
+d:\programs\pat\pat-b\pat\pat.cpp(61): error C2059: 语法错误:“)”
+d:\programs\pat\pat-b\pat\pat.cpp(62): error C2143: 语法错误: 缺少“;”(在“{”的前面)
