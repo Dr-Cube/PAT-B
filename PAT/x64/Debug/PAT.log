@@ -1,3 +1,4 @@
 ﻿  pat.cpp
-d:\programs\pat\pat-b\pat\pat.cpp(61): error C2059: 语法错误:“)”
-d:\programs\pat\pat-b\pat\pat.cpp(62): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+d:\programs\pat\pat-b\pat\pat.cpp(9): warning C4101: “n”: 未引用的局部变量
+  PAT.vcxproj -> D:\programs\PAT\PAT-B\x64\Debug\PAT.exe
+  PAT.vcxproj -> D:\programs\PAT\PAT-B\x64\Debug\PAT.pdb (Partial PDB)

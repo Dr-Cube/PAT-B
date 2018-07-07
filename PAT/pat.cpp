@@ -1,13 +1,13 @@
 //1072
+
 #include<iostream>
 #include<string>
 
-using namespace std;
-
+using namespace std; 
 int main()
 {
+	int n;
 	
-
 	system("pause");
 	return 0;
 }
