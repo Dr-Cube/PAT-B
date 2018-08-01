@@ -1,16 +1,56 @@
-//1072
-
+//1076
 #include<iostream>
 #include<string>
 
-using namespace std; 
+using namespace std;
+int ans2pass(string ans)
+{
+	if (ans=="A-T")
+	{
+		return 1;
+	}
+	if (ans == "B-T") return 2;
+	if (ans == "C-T") return 3;
+	if (ans == "D-T")return 4;
+	else return -1;
+}
 int main()
 {
-	int n;
-	
+	int N;
+	cin >> N;
+	string temp;
+	int temp_pw;
+	int password[100];
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			cin >> temp;
+			temp_pw = ans2pass(temp);
+			if (temp_pw > 0) password[i] = temp_pw;
+		}
+		
+	}
+	for (int i = 0; i < N; i++)
+	{
+		cout << password[i];
+	}
 	system("pause");
-	return 0;
 }
+
+//1072
+
+//#include<iostream>
+//#include<string>
+//
+//using namespace std; 
+//int main()
+//{
+//	int n;
+//	
+//	system("pause");
+//	return 0;
+//}
 
 
 //1041
