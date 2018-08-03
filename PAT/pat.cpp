@@ -1,42 +1,75 @@
-//1076
+//1017
 #include<iostream>
+#include<stdint.h>
 #include<string>
 
 using namespace std;
-int ans2pass(string ans)
-{
-	if (ans=="A-T")
-	{
-		return 1;
-	}
-	if (ans == "B-T") return 2;
-	if (ans == "C-T") return 3;
-	if (ans == "D-T")return 4;
-	else return -1;
-}
 int main()
 {
-	int N;
-	cin >> N;
-	string temp;
-	int temp_pw;
-	int password[100];
-	for (int i = 0; i < N; i++)
+	string A;
+	int B;
+	int sizeA, temp;
+	string Result;
+	int temp_r,temp_y;
+	cin >> A >> B;
+	sizeA = A.size();
+	temp = A[0] - '0';
+	for (int i = 1; i <= sizeA; i++)
 	{
-		for (int j = 0; j < 4; j++)
+		temp_r = temp / B;
+		if (i == 1)
 		{
-			cin >> temp;
-			temp_pw = ans2pass(temp);
-			if (temp_pw > 0) password[i] = temp_pw;
+			if (temp_r == 0);
+			if (temp_r != 0)cout << temp_r;
 		}
-		
+		if (i > 1 || sizeA == 1) cout << temp_r;
+		temp_y = temp%B;
+		temp = 10 * temp_y + (A[i] - '0');
+
 	}
-	for (int i = 0; i < N; i++)
-	{
-		cout << password[i];
-	}
+	cout << ' ' << temp_y;
 	system("pause");
 }
+
+//1076
+//#include<iostream>
+//#include<string>
+//
+//using namespace std;
+//int ans2pass(string ans)
+//{
+//	if (ans=="A-T")
+//	{
+//		return 1;
+//	}
+//	if (ans == "B-T") return 2;
+//	if (ans == "C-T") return 3;
+//	if (ans == "D-T")return 4;
+//	else return -1;
+//}
+//int main()
+//{
+//	int N;
+//	cin >> N;
+//	string temp;
+//	int temp_pw;
+//	int password[100];
+//	for (int i = 0; i < N; i++)
+//	{
+//		for (int j = 0; j < 4; j++)
+//		{
+//			cin >> temp;
+//			temp_pw = ans2pass(temp);
+//			if (temp_pw > 0) password[i] = temp_pw;
+//		}
+//		
+//	}
+//	for (int i = 0; i < N; i++)
+//	{
+//		cout << password[i];
+//	}
+//	system("pause");
+//}
 
 //1072
 
