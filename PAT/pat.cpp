@@ -1,35 +1,50 @@
-//1017
+//1028
 #include<iostream>
-#include<stdint.h>
+#include<stdio.h>
 #include<string>
 
 using namespace std;
 int main()
 {
-	string A;
-	int B;
-	int sizeA, temp;
-	string Result;
-	int temp_r,temp_y;
-	cin >> A >> B;
-	sizeA = A.size();
-	temp = A[0] - '0';
-	for (int i = 1; i <= sizeA; i++)
-	{
-		temp_r = temp / B;
-		if (i == 1)
-		{
-			if (temp_r == 0);
-			if (temp_r != 0)cout << temp_r;
-		}
-		if (i > 1 || sizeA == 1) cout << temp_r;
-		temp_y = temp%B;
-		temp = 10 * temp_y + (A[i] - '0');
-
-	}
-	cout << ' ' << temp_y;
+	int N;
+	
+	cin >> N;
+	return 0;
 	system("pause");
 }
+
+//1017
+//#include<iostream>
+//#include<stdio.h>
+//#include<string>
+//
+//using namespace std;
+//int main()
+//{
+//	string A;
+//	int B;
+//	int sizeA, temp;
+//	string Result;
+//	int temp_r,temp_y;
+//	cin >> A >> B;
+//	sizeA = A.size();
+//	temp = A[0] - '0';
+//	for (int i = 1; i <= sizeA; i++)
+//	{
+//		temp_r = temp / B;
+//		if (i == 1)
+//		{
+//			if (temp_r == 0);
+//			if (temp_r != 0)cout << temp_r;
+//		}
+//		if (i > 1 || sizeA == 1) cout << temp_r;
+//		temp_y = temp%B;
+//		temp = 10 * temp_y + (A[i] - '0');
+//
+//	}
+//	cout << ' ' << temp_y;
+//	system("pause");
+//}
 
 //1076
 //#include<iostream>
