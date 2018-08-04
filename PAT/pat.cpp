@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	int N;
-	
+	//ÓÃÒıÓÃ&
 	cin >> N;
 	return 0;
 	system("pause");
