@@ -8,6 +8,8 @@ int main()
 {
 	int N;
 	//ÓÃÒıÓÃ&
+	string name;
+	int yyyy, mm, dd;
 	cin >> N;
 	return 0;
 	system("pause");
