@@ -1,19 +1,72 @@
-//1028
+//1031
 #include<iostream>
 #include<stdio.h>
 #include<string>
-
+//#define weights[17]={}
 using namespace std;
+int isLegal(string IdNum)
+{
+	int weights[17] = { 7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2 };
+	int sum = 0;
+	int Z;
+	for (int i = 0; i < 17; i++)
+	{
+		if (IdNum[i] <= '9' && IdNum[i] >= '0')
+		{
+			sum += ((IdNum[i] - '0') )*weights[i];
+			//cout << "sum is " << sum << endl;
+			
+		}
+		else return -1;
+	}
+	Z = sum % 11;
+	return Z;
+}
 int main()
 {
 	int N;
-	//用引用&
-	string name;
-	int yyyy, mm, dd;
+	bool flag = true;
+	char M[11] = { '1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2' };
+	string IdNum[105];
 	cin >> N;
-	return 0;
+	//cout << isLegal(IdNum);
+	for (int i = 0; i < N; i++)
+	{
+		cin >> IdNum[i];
+	}
+	for (int i = 0; i < N; i++)
+	{
+
+		if (IdNum[i][17] != M[isLegal(IdNum[i])])
+		{
+			//cout << "Z is " << isLegal(IdNum[i]) << endl;
+			//cout << "M is " << M[isLegal(IdNum[i])] << endl;
+			cout << IdNum[i] << endl;
+			flag = false;
+		}
+	}
+	if (flag) cout << "All passed" << endl;
 	system("pause");
+	return 0;
 }
+
+
+//1028
+//#include<iostream>
+//#include<stdio.h>
+//#include<string>
+//
+//using namespace std;
+//int main()
+//{
+//	int N;
+//	//用引用&
+//	string name;
+//	int yyyy, mm, dd;
+//	cin >> N;
+//	return 0;
+//	system("pause");
+//}
 
 //1017
 //#include<iostream>
