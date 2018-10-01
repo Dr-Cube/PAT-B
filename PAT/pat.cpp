@@ -1,54 +1,143 @@
-//1031
-#include<iostream>
-#include<stdio.h>
-#include<string>
-//#define weights[17]={}
-using namespace std;
-int isLegal(string IdNum)
-{
-	int weights[17] = { 7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2 };
-	int sum = 0;
-	int Z;
-	for (int i = 0; i < 17; i++)
-	{
-		if (IdNum[i] <= '9' && IdNum[i] >= '0')
-		{
-			sum += ((IdNum[i] - '0') )*weights[i];
-			//cout << "sum is " << sum << endl;
-			
-		}
-		else return -1;
-	}
-	Z = sum % 11;
-	return Z;
-}
-int main()
-{
-	int N;
-	bool flag = true;
-	char M[11] = { '1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2' };
-	string IdNum[105];
-	cin >> N;
-	//cout << isLegal(IdNum);
-	for (int i = 0; i < N; i++)
-	{
-		cin >> IdNum[i];
-	}
-	for (int i = 0; i < N; i++)
-	{
 
-		if (IdNum[i][17] != M[isLegal(IdNum[i])])
-		{
-			//cout << "Z is " << isLegal(IdNum[i]) << endl;
-			//cout << "M is " << M[isLegal(IdNum[i])] << endl;
-			cout << IdNum[i] << endl;
-			flag = false;
-		}
-	}
-	if (flag) cout << "All passed" << endl;
-	system("pause");
-	return 0;
-}
+
+
+//1086
+//#include<stdio.h>
+//#include<iostream>
+//#include<string.h>
+//
+//using namespace std;
+//int main()
+//{
+//	int a, b;
+//	cin >> a >> b;
+//	int c = a*b;
+//	char str[1000000];
+//	sprintf_s(str, "%d", c);
+//	int cnt = strlen(str);
+//	for (int i = cnt - 1; i >= 0; i--)
+//	{
+//		cout << str[i];
+//	}
+//	system("pause");
+//	return 0;
+//
+//}
+//
+
+//1018
+//#include<iostream>
+//#include<stdio.h>
+//#include<string>
+//
+//using namespace std;
+//
+//int whowins(char a, char b)
+//{
+//	int win = 0;
+//	if (a == 'B'&&b == 'J') win = 2;
+//	if (a == 'B'&&b == 'C') win = -2;
+//	if (a == 'C')
+//	{
+//		if (b == 'J') win = -3;
+//		if (b == 'B') win = 3;
+//	}
+//	if (a == 'J'&&b == 'B') win = -5;
+//	if (a == 'J'&&b == 'C') win = 5;
+//	else win = 0;
+//	return win;
+//}
+//int maxwin(int a, int b, int c)
+//{
+//	int result_max = 0;
+//	result_max = a;
+//	if (b > result_max) result_max = b;
+//	if (c > result_max) result_max = c;
+//	return result_max;
+//}
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	char a[100005] = { 'a' };
+//	char b[100005] = { 'b' };
+//	int amax[3], bmax[3];
+//	int result_wina = -1;
+//	int result_winb = 1;
+//	int result_losta = -1;
+//	int result_lostb = 1;
+//	for (int i = 0; i < n; i++)
+//	{
+//		cin >> a[i] >> b[i];
+//		//cout << a[i] << ' ' << b[i] << endl;
+//		if (whowins(a[i], b[i] > 0))
+//		{
+//			result_losta++;
+//			if(whowins(a[i], b[i])%2==0)
+//		}
+//		if (whowins(a[i], b[i]) < 0) 
+//		{
+//			result_wina++;
+//		}
+//	}
+//
+//	system("pause");
+//	return 0;
+//}
+//
+
+
+//1031
+//#include<iostream>
+//#include<stdio.h>
+//#include<string>
+////#define weights[17]={}
+//using namespace std;
+//int isLegal(string IdNum)
+//{
+//	int weights[17] = { 7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2 };
+//	int sum = 0;
+//	int Z;
+//	for (int i = 0; i < 17; i++)
+//	{
+//		if (IdNum[i] <= '9' && IdNum[i] >= '0')
+//		{
+//			sum += ((IdNum[i] - '0') )*weights[i];
+//			//cout << "sum is " << sum << endl;
+//			
+//		}
+//		else return -1;
+//	}
+//	Z = sum % 11;
+//	return Z;
+//}
+//int main()
+//{
+//	int N;
+//	bool flag = true;
+//	char M[11] = { '1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2' };
+//	string IdNum[105];
+//	cin >> N;
+//	//cout << isLegal(IdNum);
+//	for (int i = 0; i < N; i++)
+//	{
+//		cin >> IdNum[i];
+//	}
+//	for (int i = 0; i < N; i++)
+//	{
+//
+//		if (IdNum[i][17] != M[isLegal(IdNum[i])])
+//		{
+//			//cout << "Z is " << isLegal(IdNum[i]) << endl;
+//			//cout << "M is " << M[isLegal(IdNum[i])] << endl;
+//			cout << IdNum[i] << endl;
+//			flag = false;
+//		}
+//	}
+//	if (flag) cout << "All passed" << endl;
+//	system("pause");
+//	return 0;
+//}
 
 
 //1028
