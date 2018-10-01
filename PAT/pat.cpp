@@ -1,31 +1,78 @@
-//1087
+//1088
 #include<stdio.h>
 #include<iostream>
+#include<math.h>
 
 using namespace std;
-int getInt(int n)
+int a2b(int a)
 {
-	return n / 2 + n / 3 + n / 5;
+	int b = a / 10 + (a % 10) * 10;
+	return b;
+}
+void printrlt(int M, int abli)
+{
+	if (M == abli) cout << "Ping";
+	else if (M > abli) cout << "Gai";
+	else cout << "Cong";
 }
 int main()
 {
-	int N;
-	int cnt = 1;
-	cin >> N;
-	for (int i = 1; i <= N; i++)
+	int M, X, Y;
+	int ablia, ablib;
+	double ablic1, ablic2;
+	cin >> M >> X >> Y;
+	for (int i = 99; i >= 10; i--)
 	{
-		if (i == 1);
-		else
-		{
-			if (getInt(i) != getInt(i - 1)) cnt++;
-			if (getInt(i) == getInt(i - i)) cnt = cnt;
-		}
+		ablia = i;
+		ablib = a2b(ablia);
+		ablic1 = abs(ablia - ablib);
+		//ablic2 = ablib*X;
+		if (ablic1*Y == ablib*X) break;
+		//if (ablic1 != ablic2) continue;
 	}
-	cout << cnt;
-
+	if (ablia == 10) cout << "No Solution";
+	else
+	{
+		cout << ablia << ' ';
+		printrlt(M, ablia);
+		cout << ' ';
+		printrlt(M, ablib);
+		cout << ' ';
+		printrlt(M, ablib/Y);
+	}
+	//cout << ablia << ' ' << ablib << ' ' << ablic1 << endl;
 	system("pause");
 	return 0;
 }
+
+//1087
+//#include<stdio.h>
+//#include<iostream>
+//
+//using namespace std;
+//int getInt(int n)
+//{
+//	return n / 2 + n / 3 + n / 5;
+//}
+//int main()
+//{
+//	int N;
+//	int cnt = 1;
+//	cin >> N;
+//	for (int i = 1; i <= N; i++)
+//	{
+//		if (i == 1);
+//		else
+//		{
+//			if (getInt(i) != getInt(i - 1)) cnt++;
+//			if (getInt(i) == getInt(i - i)) cnt = cnt;
+//		}
+//	}
+//	cout << cnt;
+//
+//	system("pause");
+//	return 0;
+//}
 
 
 //1086

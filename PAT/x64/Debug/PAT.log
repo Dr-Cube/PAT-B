@@ -1,3 +1,4 @@
 ﻿  pat.cpp
+d:\programs\pat\pat-b\pat\pat.cpp(22): warning C4101: “ablic2”: 未引用的局部变量
   PAT.vcxproj -> D:\programs\PAT\PAT-B\x64\Debug\PAT.exe
   PAT.vcxproj -> D:\programs\PAT\PAT-B\x64\Debug\PAT.pdb (Partial PDB)
