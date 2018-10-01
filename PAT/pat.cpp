@@ -1,4 +1,31 @@
+//1087
+#include<stdio.h>
+#include<iostream>
 
+using namespace std;
+int getInt(int n)
+{
+	return n / 2 + n / 3 + n / 5;
+}
+int main()
+{
+	int N;
+	int cnt = 1;
+	cin >> N;
+	for (int i = 1; i <= N; i++)
+	{
+		if (i == 1);
+		else
+		{
+			if (getInt(i) != getInt(i - 1)) cnt++;
+			if (getInt(i) == getInt(i - i)) cnt = cnt;
+		}
+	}
+	cout << cnt;
+
+	system("pause");
+	return 0;
+}
 
 
 //1086
